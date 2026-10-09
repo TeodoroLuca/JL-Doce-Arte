@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add("js");</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de doces tradicionais e gourmet da Doce e Arte. Tradicionais por R$ 160,00 o cento e gourmet por R$ 190,00 o cento." />
+  <meta name="theme-color" content="#7b2f4d" />
+  <title>Doce e Arte | Doces Artesanais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico?v=20260928" sizes="any" />
+  <link rel="icon" href="favicon.svg?v=20260928" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32x32.png?v=20260928" type="image/png" sizes="32x32" />
+  <link rel="icon" href="favicon-16x16.png?v=20260928" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20260928" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Doce e Arte - início">
+        <img class="brand-logo" src="assets/logo-doce-e-arte.jpg?v=20260928" alt="Doce e Arte — Doces Artesanais" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#produtos">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#depoimentos">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="cart-button" type="button" id="openCart" aria-label="Abrir carrinho">
+        <span class="cart-icon">🛍️</span>
+        <span>Pedido</span>
+        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Feitos à mão, um a um</span>
+          <h1>Doces que transformam <em>momentos</em> em lembranças.</h1>
+          <p>Doces tradicionais e gourmet preparados com carinho para aniversários, eventos e momentos especiais. Conheça nossos sabores e escolha a sua encomenda.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#produtos">Ver catálogo</a>
+            <a class="btn btn-secondary" href="#eventos">Encomendas para eventos</a>
+          </div>
+          <div class="hero-badges" aria-label="Diferenciais">
+            <span>✓ Produção artesanal</span>
+            <span>✓ Ingredientes selecionados</span>
+            <span>✓ Embalagens presenteáveis</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="blob blob-a"></div>
+          <div class="blob blob-b"></div>
+          <div class="sweet-card large">
+            <div class="sweet-illustration truffle chocolate"></div>
+            <div class="sweet-illustration truffle pistachio"></div>
+            <div class="sweet-illustration truffle strawberry"></div>
+            <div class="sweet-illustration grape-surprise"></div>
+          </div>
+          <div class="floating-note note-top">⭐ 5/5 em avaliações</div>
+          <div class="floating-note note-bottom">Pedidos sob encomenda</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>100%</strong><span>artesanal</span></div>
+        <div><strong>13</strong><span>sabores no cardápio</span></div>
+        <div><strong>24h</strong><span>antecedência sugerida</span></div>
+        <div><strong>Feito</strong><span>com carinho</span></div>
+      </div>
+    </section>
+
+    <section class="section catalog-section" id="produtos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Nosso catálogo</span>
+            <h2>Doces para cada ocasião.</h2>
+            <p class="section-lead">Inspire-se nas fotos e confira abaixo nossos sabores e valores por cento.</p>
+          </div>
+          <a class="text-link catalog-contact-link" href="#contato">Encomendar para meu evento →</a>
+        </div>
+
+        <figure class="catalog-showcase reveal">
+          <div class="catalog-showcase-head">
+            <div>
+              <span class="catalog-kicker">Galeria de sabores</span>
+              <h3>Conheça nossos sabores</h3>
+            </div>
+            <button class="catalog-zoom" type="button" id="openCatalog" aria-haspopup="dialog" aria-controls="catalogDialog">↗ Ampliar imagem</button>
+          </div>
+          <button type="button" class="catalog-image-button" id="openCatalogImage" aria-label="Ampliar a imagem do catálogo de doces gourmet">
+            <img src="assets/catalogo-doces.jpg" width="1122" height="585" loading="lazy" decoding="async" alt="Catálogo ilustrado com dez doces: bicho de pé com Nutella, brigadeiro de amendoim, churros com doce de leite, brigadeiro de uva, Oreo, Ninho com Nutella, bicho de pé, cajuzinho, brigadeiro de ameixa e beijinho de coco branco." />
+          </button>
+          <div class="catalog-mobile-gallery" aria-label="Fotos individuais dos doces presentes na imagem do catálogo">
+            <figure class="catalog-mobile-tile"><img src="assets/doce-bicho-de-pe-nutella.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Bicho de pé com Nutella" /><figcaption>Bicho de pé com Nutella</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-brigadeiro-amendoim.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Brigadeiro de amendoim" /><figcaption>Brigadeiro de amendoim</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-churros-doce-de-leite.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Churros com doce de leite" /><figcaption>Churros com doce de leite</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-brigadeiro-uva.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Brigadeiro de uva" /><figcaption>Brigadeiro de uva</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-brigadeiro-oreo.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Brigadeiro de Oreo" /><figcaption>Brigadeiro de Oreo</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-ninho-nutella.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Ninho com Nutella" /><figcaption>Ninho com Nutella</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-bicho-de-pe.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Bicho de pé" /><figcaption>Bicho de pé</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-cajuzinho.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Cajuzinho" /><figcaption>Cajuzinho</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-brigadeiro-ameixa.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Brigadeiro de ameixa" /><figcaption>Brigadeiro de ameixa</figcaption></figure>
+            <figure class="catalog-mobile-tile"><img src="assets/doce-beijinho.jpg" width="224" height="293" loading="lazy" decoding="async" alt="Beijinho de coco branco" /><figcaption>Beijinho de coco branco</figcaption></figure>
+          </div>
+          <figcaption class="catalog-caption">Imagem ilustrativa dos sabores. Veja as opções disponíveis e seus valores por categoria a seguir.</figcaption>
+        </figure>
+
+        <div class="price-section-heading reveal">
+          <div>
+            <span class="eyebrow">Preços e sabores</span>
+            <h2>Escolha a categoria ideal</h2>
+          </div>
+          <span class="quantity-pill">Valores para 100 unidades</span>
+        </div>
+
+        <div class="catalog-plans" id="productsGrid">
+          <article class="sweet-plan traditional-plan reveal">
+            <div class="plan-head">
+              <span class="plan-category">Receitas que encantam</span>
+              <h3>Doces tradicionais</h3>
+              <p>Os clássicos que não podem faltar na sua comemoração.</p>
+            </div>
+            <div class="plan-price"><strong>R$ 160,00</strong><span>o cento · 100 unidades</span></div>
+            <div class="plan-flavors">
+              <h4>Sabores disponíveis</h4>
+              <ul class="flavor-list">
+                <li>Beijinho</li>
+                <li>Brigadeiro tradicional</li>
+                <li>Bicho de pé</li>
+                <li>Cajuzinho</li>
+                <li>Dois amores</li>
+                <li>Olho de sogra</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary wide add-btn" type="button" data-name="Doces tradicionais" data-price="160">Adicionar 1 cento ao pedido</button>
+          </article>
+
+          <article class="sweet-plan gourmet-plan reveal">
+            <div class="plan-head">
+              <span class="plan-category">Um toque especial</span>
+              <h3>Doces gourmet</h3>
+              <p>Sabores especiais para surpreender em cada detalhe.</p>
+            </div>
+            <div class="plan-price"><strong>R$ 190,00</strong><span>o cento · 100 unidades</span></div>
+            <div class="plan-flavors">
+              <h4>Sabores disponíveis</h4>
+              <ul class="flavor-list">
+                <li>Bicho de pé com Nutella</li>
+                <li>Brigadeiro de amendoim</li>
+                <li>Churros com doce de leite</li>
+                <li>Surpresa de uva</li>
+                <li>Brigadeiro de Oreo</li>
+                <li>Ninho com Nutella</li>
+                <li>Brigadeiro belga</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary wide add-btn" type="button" data-name="Doces gourmet" data-price="190">Adicionar 1 cento ao pedido</button>
+          </article>
+        </div>
+        <p class="catalog-note">Selecione a quantidade de centos desejada e informe os sabores de sua preferência ao finalizar o pedido. Combinações e disponibilidade são confirmadas pelo WhatsApp.</p>
+      </div>
+    </section>
+
+    <dialog id="catalogDialog" class="catalog-dialog" aria-label="Catálogo de doces ampliado">
+      <div class="catalog-dialog-top"><strong>Catálogo de doces</strong><button type="button" id="closeCatalog" aria-label="Fechar imagem ampliada">✕ Fechar</button></div>
+      <p class="catalog-swipe-hint">Deslize para os lados para ler todos os sabores.</p>
+      <div class="catalog-dialog-media" tabindex="0" aria-label="Imagem ampliada do catálogo, deslize horizontalmente para explorar">
+        <img src="assets/catalogo-doces.jpg" width="1122" height="585" alt="Catálogo ampliado com fotos e nomes de dez tipos de doces." />
+      </div>
+      <p>Consulte os sabores disponíveis e os valores por cento na página. <a class="catalog-original-link" href="assets/catalogo-doces.jpg" target="_blank" rel="noopener noreferrer">Abrir imagem original ↗</a></p>
+    </dialog>
+
+    <section class="section section-soft" id="sobre">
+      <div class="container story-grid">
+        <div class="story-visual reveal" aria-hidden="true">
+          <div class="story-card one">feito<br><strong>à mão</strong></div>
+          <div class="story-card two">com ingredientes<br><strong>selecionados</strong></div>
+          <div class="story-ring"></div>
+        </div>
+        <div class="story-copy reveal">
+          <span class="eyebrow">Nossa essência</span>
+          <h2>Receitas afetivas com acabamento profissional.</h2>
+          <p>Na Doce e Arte, cada doce é produzido em pequenos lotes para preservar sabor, textura e frescor. O cuidado começa na escolha dos ingredientes e termina na apresentação de cada pedido.</p>
+          <p>Atendemos pedidos individuais, presentes e eventos, sempre com opções personalizadas para tornar cada ocasião ainda mais especial.</p>
+          <a class="text-link" href="#contato">Falar sobre meu pedido →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="eventos">
+      <div class="container event-panel reveal">
+        <div>
+          <span class="eyebrow light">Eventos & empresas</span>
+          <h2>Doces para comemorar do seu jeito.</h2>
+          <p>Montamos kits para aniversários, casamentos, confraternizações, lembranças corporativas e datas especiais.</p>
+          <a class="btn btn-light" href="#contato">Solicitar orçamento</a>
+        </div>
+        <div class="event-points">
+          <span>Embalagens personalizadas</span>
+          <span>Mix de sabores</span>
+          <span>Quantidade sob medida</span>
+          <span>Identidade para eventos</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section-heading simple reveal">
+          <div><span class="eyebrow">Quem prova, recomenda</span><h2>Carinho em cada avaliação</h2></div>
+        </div>
+        <div class="reviews-grid">
+          <blockquote class="review reveal"><div class="stars">★★★★★</div><p>“Os doces chegaram impecáveis e a surpresa de uva foi a primeira a acabar. Muito capricho!”</p><footer>Mariana A.</footer></blockquote>
+          <blockquote class="review reveal"><div class="stars">★★★★★</div><p>“Comprei uma caixa para presente e a apresentação ficou linda. Brigadeiro de pistache maravilhoso.”</p><footer>Lucas R.</footer></blockquote>
+          <blockquote class="review reveal"><div class="stars">★★★★★</div><p>“Atendimento ótimo e doces muito frescos. Já virou tradição nos aniversários aqui de casa.”</p><footer>Camila S.</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Faça sua encomenda</span>
+          <h2>Conte como podemos adoçar seu momento.</h2>
+          <p>Preencha os dados abaixo. Ao enviar, seu pedido será preparado para continuar a conversa pelo WhatsApp.</p>
+          <div class="contact-mini">
+            <div><span>📍</span><p><strong>Atendimento</strong><br>Curitiba e região</p></div>
+            <div><span>🕘</span><p><strong>Horário</strong><br>Seg. a sáb., 09h às 18h</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="quoteForm">
+          <label>Nome<input type="text" name="name" required placeholder="Seu nome" /></label>
+          <label>Telefone<input type="tel" name="phone" required placeholder="(41) 99999-9999" /></label>
+          <div class="form-row">
+            <label>Tipo de pedido<select name="type"><option>Pedido pessoal</option><option>Presente</option><option>Aniversário</option><option>Casamento</option><option>Empresa / evento</option></select></label>
+            <label>Data desejada<input type="date" name="date" /></label>
+          </div>
+          <label>Mensagem<textarea name="message" rows="4" placeholder="Ex.: 1 cento de doces gourmet, sabores variados, entrega à tarde..."></textarea></label>
+          <button class="btn btn-primary wide" type="submit">Enviar pelo WhatsApp</button>
+          <small class="form-note">Ao continuar, o WhatsApp será aberto com sua mensagem pronta.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#inicio" aria-label="Doce e Arte - início"><img class="footer-logo" src="assets/logo-doce-e-arte.jpg?v=20260928" alt="Doce e Arte — Doces Artesanais" /></a>
+        <p>Pequenos doces. Grandes momentos.</p>
+      </div>
+      <div><strong>Menu</strong><a href="#produtos">Cardápio</a><a href="#sobre">Sobre</a><a href="#eventos">Eventos</a></div>
+      <div class="footer-contact">
+        <strong>Contato</strong>
+        <a class="footer-social-link" href="https://wa.me/5541997749722" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp no número (41) 99937-2268">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 11.7a8.3 8.3 0 0 1-12.2 7.4L4 20.2l1.1-4A8.3 8.3 0 1 1 20.3 11.7Z" />
+            <path d="M8.5 7.8c.2-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.8 2c.1.3.1.5-.1.7l-.6.8c-.2.2-.1.4 0 .6.5 1 1.4 1.9 2.5 2.4.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.9.9c.3.1.4.3.4.5 0 .3-.1 1.4-.7 2-.6.6-1.5.9-2.4.7-1-.2-2.4-.7-4.1-2.2-1.4-1.3-2.4-2.9-2.7-3.9-.3-1-.1-2.2.3-3.1Z" />
+          </svg>
+          <span>(41) 99774-9722</span>
+        </a>
+        <a class="footer-social-link footer-instagram" href="https://www.instagram.com/doceearte.jl/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram @doceearte.jl">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle class="icon-dot" cx="17.5" cy="6.7" r="1" />
+          </svg>
+          <span>@doceearte.jl</span>
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Doce e Arte.</span><span>Feito com carinho 🍬</span></div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true" inert>
+    <div class="cart-head"><div><small>Seu pedido</small><h3 id="cartTitle">Carrinho</h3></div><button type="button" id="closeCart" aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🍫</span><p>Seu carrinho está vazio.</p><small>Escolha uma categoria para adicionar centos de doces.</small></div>
+    <div class="cart-footer">
+      <label class="cart-notes-label" for="cartNotes">Sabores desejados e observações (opcional)</label>
+      <textarea id="cartNotes" class="cart-notes" rows="3" placeholder="Ex.: brigadeiro tradicional, beijinho e Ninho com Nutella..."></textarea>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button type="button" class="btn btn-primary wide" id="checkoutBtn">Finalizar no WhatsApp</button>
+      <small>Valores referentes a centos de 100 unidades. Entrega e sabores a confirmar.</small>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Item adicionado ao pedido.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
