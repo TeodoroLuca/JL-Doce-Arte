@@ -30,7 +30,11 @@ O telefone de WhatsApp para pedidos fica na constante `WHATSAPP_NUMBER` em `scri
 - `index.html`: informações, categorias, texto e cardápio.
 - `styles.css`: estilos e media queries.
 - `script.js`: menu, visualização ampliada, carrinho e WhatsApp.
-- `assets/catalogo-doces.jpg`: imagem original fornecida.
-- `assets/doce-*.jpg`: fotos individuais para a versão mobile.
+- `assets/catalogo-doces-olho-de-sogra.jpg`: catálogo atualizado com a imagem e o nome Olho de Sogra.
+- `assets/doce-*.jpg`: fotos individuais para a versão mobile, incluindo `doce-olho-de-sogra.jpg`.
 
 **Importante:** ao trocar a imagem panorâmica do catálogo, atualize também os recortes individuais de `assets/doce-*.jpg` para preservar a consistência visual.
+
+## Atualização do Olho de Sogra
+
+A imagem e o nome “Brigadeiro de Ameixa” foram substituídos por “Olho de Sogra” tanto no catálogo panorâmico quanto no cartão de celular. O sabor permanece na categoria de doces tradicionais (R$ 160,00 o cento).
